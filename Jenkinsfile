@@ -48,7 +48,7 @@ pipeline {
                     docker run -d \
                         --name nexusbank-prod \
                         -p 3000:3000 \
-                        -p 8080:8080 \
+                        -p 4000:8080 \
                         --restart unless-stopped \
                         ${DOCKER_IMAGE}:${DOCKER_TAG}
                     """
