@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusBank | Secure Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="auth-layout">
+        <div class="auth-hero">
+            <h1>NexusBank</h1>
+            <p>Experience the next generation of secure, seamless digital banking across all your trusted devices.</p>
+        </div>
+        <div class="auth-content">
+            <div class="auth-card">
+                <h2>Welcome Back</h2>
+                <p class="subtitle">Enter your credentials to access your accounts.</p>
+                
+                <div id="alert-box" class="alert"></div>
+
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="john.doe" required autocomplete="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="••••••••" required autocomplete="current-password">
+                    </div>
+                    <button type="submit" class="btn">Access Accounts</button>
+                </form>
+
+                <div id="approval-section">
+                    <h3 style="color: #D35400; font-size: 1.1rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        Unrecognized Device
+                    </h3>
+                    <p style="font-size: 0.9rem; color: #935116;">We blocked a login attempt from this device for your security. Verify your device fingerprint to proceed.</p>
+                    <div class="fingerprint-box" id="fingerprint-display"></div>
+                    <button id="approve-btn" class="btn btn-secondary" style="background: white;">Trust Device & Login</button>
+                </div>
+
+                <div class="links">
+                    <p>New to NexusBank? <a href="register.html">Open an account</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('token')) window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>
