@@ -356,13 +356,9 @@ This project is open source and available under the MIT License.
 
 ## 👨‍💻 Author
 
-**Raunakmali08**
+**Raunakmali08(Ronin)**
 
 ---
-
-## 📞 Support
-
-For issues, questions, or suggestions, please open an issue on GitHub.
 
 ---
 
